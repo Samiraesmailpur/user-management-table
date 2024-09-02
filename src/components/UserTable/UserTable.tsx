@@ -64,7 +64,7 @@ const UserTable = () => {
             ))
           ) : (
             <tr>
-              <td>Users not found</td>
+              <td colSpan={4}>Users not found</td>
             </tr>
           )}
         </tbody>
