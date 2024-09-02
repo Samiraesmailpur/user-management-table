@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.container {
+  max-width: 1200px;
+  background-color: $white-color;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 30px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+
+    thead {
+      background-color: $primary-color;
+      color: $white-color;
+
+      th {
+        padding: 12px 15px;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      tr {
+        &:hover {
+          background-color: $hover-color;
+        }
+
+        td {
+          padding: 12px 15px;
+          text-align: left;
+          border-bottom: 1px solid $border-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filter-container {
+      flex-direction: column;
+
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
